@@ -52,7 +52,7 @@
 		<div class='nav-left'>
 			<ul>
 				<li class='title'>产品管理</li>
-				<li><a href="#panel-a" f='product.html' ><span class='glyphicon glyphicon-tower'></span>产品添加</a></li>
+				<li><a href="#panel-a" f='product.html' ><span class='glyphicon glyphicon-tower'></span>产品列表</a></li>
 				<li class='title'>用户管理</li>
 				<li><a href="#panel-f" f='frame2.html'><span class='glyphicon glyphicon-tower'></span>用户设置</a></li>
 			</ul>
@@ -60,6 +60,14 @@
 		<script type="text/javascript">
 		$('.nav-left ul li a').click(function(){
 
+			if($(this).parent().attr('class')=='active'){
+				var id = $(this).attr('href');
+				var fram;
+				(document.getElementById(id))?fram = $(document.getElementById(id)).children('iframe'):fram = $(document.getElementById('panel-index')).children('iframe');
+				fram.attr('src',fram.attr('src'));
+				/*(document.getElementById(id))?$(document.getElementById(id)).children('iframe').contentWindow.location.reload(true):$(document.getElementById('panel-index')).children('iframe').location.reload(true);*/
+				return;
+			}
 			var href  = $(this).attr('href');
 			var list  = $('.nav-tabs li');
 
