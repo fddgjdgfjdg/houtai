@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="public/css/panel-index.css">
+	<link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="public/bootstrap/js/jquery.js"></script>
+	<script type="text/javascript" src="public/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="public/charts/highcharts.js"></script>
+	<script type="text/javascript">
+	$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        xAxis: {
+            categories: [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Rainfall (mm)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Tokyo',
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6]
+        }, {
+            name: 'New York',
+            data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0]
+        }, {
+            name: 'London',
+            data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6]
+        }, {
+            name: 'Berlin',
+            data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4]
+        }]
+    });
+$('#container2').highcharts({
+        chart: {
+            type: 'column'
+        },
+        xAxis: {
+            categories: [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Rainfall (mm)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Tokyo',
+            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6]
+        }, {
+            name: 'New York',
+            data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0]
+        }, {
+            name: 'London',
+            data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6]
+        }, {
+            name: 'Berlin',
+            data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4]
+        }]
+    });
+});
+
+</script>
+</head>
+<body>
+	<section>
+		<div class='left'>
+			<div class="panel panel-default height-100">
+				<div class="panel-heading">用户信息</div>
+				<div class="panel-body">
+					<ul>
+						<li>
+							用户名
+						</li>
+						<li>
+							最后登录时间
+						</li>
+						<li>
+							最后登录ip
+						</li>
+						<li>
+							用户级别
+						</li>
+						<li>
+							当前操作系统
+						</li>
+						<li>
+							当前浏览器
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel panel-default height-100">
+				<div class="panel-heading">系统参数</div>
+				<div class="panel-body">
+					<ul>
+						<li>
+							数据库版本
+						</li>
+						<li>
+							php版本
+						</li>
+						<li>
+							运行环境
+						</li>
+						<li>
+							操作系统
+						</li>
+						<li>
+							当前系统版本
+						</li>
+						<li>
+							版权
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class='right'>
+			<div class="panel panel-default height-50">
+				<div class="panel-heading">一周点击量</div>
+				<div class="panel-body">
+			    <div id="container" style="height:210px"></div>
+				</div>
+			</div>
+			<div class="panel panel-default height-50">
+				<div class="panel-heading">一周成交量</div>
+				<div class="panel-body">
+			    <div id="container2" style="height:210px"></div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+section{
+	margin: 20px auto;
+}
+section .left{
+	float: left;
+	width: 35%;
+}
+section .right{
+	float: left;
+	margin-left: 2%;
+	width: 63%;
+}
