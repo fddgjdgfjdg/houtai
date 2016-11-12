@@ -10,10 +10,10 @@
 	<script type="text/javascript">
 	function NavWith(){
 		var num = $('.nav-tabs li').length-1;
-		var big = $('.nav-tabs').width()-61;
+		var big = $('.nav-tabs').width()-63;
 		if(big<(num*200)){
 			$('.nav-tabs li').width(big/num);
-			$('.nav-tabs .tab-index').width(60);
+			$('.nav-tabs .tab-index').width(62);
 		}
 	}
 	function tab(id){
@@ -51,12 +51,13 @@
 	<section>
 		<div class='nav-left'>
 			<ul>
-				<li class='title'>产品管理</li>
-				<li><a href="#panel-a" f='product.html' ><span class='glyphicon glyphicon-tower'></span>产品列表</a></li>
 				<li class='title'>我的订单</li>
-				<li><a href="#panel-b" f='product.html'><span class='glyphicon glyphicon-tower'></span>订单管理</a></li>
+				<li><a href="#panel-b" f='order.html'><span class='glyphicon glyphicon-tower'></span>订单查询</a></li>
+				<li class='title'>商户管理</li>
+				<li><a href="#panel-a" f='product.html' ><span class='glyphicon glyphicon-tower'></span>产品列表</a></li>
+				<li><a href="#panel-c" f='company.html'><span class='glyphicon glyphicon-tower'></span>商户信息</a></li>
 				<li class='title'>用户管理</li>
-				<li><a href="#panel-f" f='frame2.html'><span class='glyphicon glyphicon-tower'></span>用户设置</a></li>
+				<li><a href="#panel-d" f='frame.html'><span class='glyphicon glyphicon-tower'></span>用户设置</a></li>
 			</ul>
 		</div>
 		<script type="text/javascript">
@@ -89,7 +90,7 @@
 				};
 			};
 
-			 $('<li class=\'active\'><a href=\''+href+'\' data-toggle="tab" onclick=\'tab("'+href+'")\'>'+$(this).text()+'</a><span onclick = \'delspan(this)\'>X</span></li>').appendTo('.nav-tabs');
+			 $('<li class=\'active\'><a href=\''+href+'\' data-toggle="tab" onclick=\'tab("'+href+'")\'><b>'+$(this).text()+'</b></a><span onclick = \'delspan(this)\'>X</span></li>').appendTo('.nav-tabs');
 			 $('<div class=\'tab-pane height-100 active\' id=\''+href+'\'><iframe src=\''+$(this).attr('f')+'\'></iframe></div>').appendTo('.tab-content');
 			 NavWith();
 		});
@@ -99,7 +100,7 @@
 				<div class="tabbable height-100" id="tabs-493696">
 					<ul class="nav nav-tabs">
 						<li class="tab-index active">
-							 <a href="#panel-index" data-toggle="tab">主页</a>
+							 <a href="#panel-index" data-toggle="tab"><b>主页</b></a>
 						</li>
 					</ul>
 					<script type="text/javascript">
