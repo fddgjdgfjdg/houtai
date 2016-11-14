@@ -1,0 +1,19 @@
+.table-70{
+	text-align: center;
+	width:50%;
+	margin: -1px auto;
+}
+.table-title{
+	padding: inherit !important;
+	line-height: 51px !important;
+	text-align: right;
+}
+.table-title label{
+	margin: 0px;
+}
+ .width-150{
+ 	width: 120px;
+ }
+ .radio-mar{
+ 	margin: 0px;
+ }

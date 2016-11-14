@@ -8,7 +8,7 @@ header .tool .tool-span{width: 35px;height:35px;display: block;font-size: 25px;f
 header .tool a{color: #eff;}
 header .tool a:hover{color: #000;}
 header .tool .news{position: absolute;top:6px;right:-2px;height: 20px;width:20px;font-weight:inherit;font-size:7px;text-align:center;line-height: 18px;padding: 0px;}
-section{width:100%;height: 100%;}
+section{width:100%;height: 80%;}
 
 
 /* 导航样式 */
@@ -44,4 +44,4 @@ section .main .nav-tabs li a{height: 34px;border: 1px solid #ddd;margin-right:0p
 section .main .nav-tabs .tab-index{width: 62px;height: 34px;margin-bottom: 1px;overflow:hidden;}
 section .main .nav-tabs li span{position: absolute;top:0px;right: 5px;line-height: 35px;cursor:pointer;}
 section .main .nav-tabs{background-color: #eee;}
-section .tabbable iframe{border:none;width: 100%;height: 110%;}
+section .tabbable iframe{border:none;width: 100%;height: 100%;}
